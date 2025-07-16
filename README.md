@@ -38,3 +38,6 @@ cd compressflow-studio
 ###  Screenshots
 <img width="1920" height="1020" alt="Screenshot 2025-07-17 021751" src="https://github.com/user-attachments/assets/e4ea078b-97ca-4dcd-b832-105fbcf752b7" />
 
+
+
+<img width="1920" height="1020" alt="Screenshot 2025-07-17 021831" src="https://github.com/user-attachments/assets/49a6e80e-4bf2-4468-bf41-675ade0def9c" />
