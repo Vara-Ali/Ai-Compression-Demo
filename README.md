@@ -26,10 +26,15 @@ CompressFlow Studio is a sleek and interactive Streamlit-based application for v
 
 ---
 
-### 🔧 Installation
+###  Installation
 
 1. **Clone the repository:**
 
 ```bash
 git clone https://github.com/yourusername/compressflow-studio.git
 cd compressflow-studio
+```
+
+###  Screenshots
+<img width="1920" height="1020" alt="Screenshot 2025-07-17 021751" src="https://github.com/user-attachments/assets/e4ea078b-97ca-4dcd-b832-105fbcf752b7" />
+
