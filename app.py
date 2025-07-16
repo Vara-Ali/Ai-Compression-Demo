@@ -321,20 +321,20 @@ def animate_progress(placeholder, duration=3):
     for i in range(101):
         progress_bar.progress(i)
         if i < 30:
-            status_text.text(f"🔍 Analyzing input... {i}%")
+            status_text.text(f" Analyzing input... {i}%")
         elif i < 70:
-            status_text.text(f"⚡ Compressing data... {i}%")
+            status_text.text(f" Compressing data... {i}%")
         else:
-            status_text.text(f"✨ Finalizing results... {i}%")
+            status_text.text(f" Finalizing results... {i}%")
         time.sleep(duration / 100)
     
-    status_text.text("✅ Compression complete!")
+    status_text.text(" Compression complete!")
 
 # Header
 st.markdown("""
 <div class="main-header">
     <h1 style="color: white; text-align: center; margin: 0; font-size: 3rem;">
-        ⚡ CompressFlow Studio
+         CompressFlow Studio
     </h1>
     <p style="color: white; text-align: center; margin: 0; font-size: 1.3rem;">
         Professional Compression Analytics & Visualization Platform
@@ -343,10 +343,10 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Sidebar
-st.sidebar.markdown("### 🎛️ Control Panel")
+st.sidebar.markdown("###  Control Panel")
 compression_mode = st.sidebar.selectbox(
     "Select Compression Mode",
-    ["🖼️ Image Compression", "📄 Text Compression", "🎥 Video Compression", "🤖 AI-Powered"]
+    [" Image Compression", " Text Compression", " Video Compression", " AI-Powered"]
 )
 
 algorithm = st.sidebar.selectbox(
@@ -355,13 +355,13 @@ algorithm = st.sidebar.selectbox(
 )
 
 quality = st.sidebar.slider("Quality Level", 1, 100, 85)
-live_mode = st.sidebar.checkbox("🔴 Live Mode", value=True)
+live_mode = st.sidebar.checkbox(" Live Mode", value=True)
 
 # Main content
 col1, col2 = st.columns([1, 1])
 
 with col1:
-    st.markdown("### 📤 Input Data")
+    st.markdown("###  Input Data")
     
     # File upload
     uploaded_file = st.file_uploader(
@@ -383,7 +383,7 @@ with col1:
         st.success("Sample data generated!")
 
 with col2:
-    st.markdown("### 📊 Live Metrics")
+    st.markdown("###  Live Metrics")
     
     # Create metric containers
     metric_col1, metric_col2, metric_col3 = st.columns(3)
@@ -396,7 +396,7 @@ with col2:
         quality_metric = st.empty()
 
 # Compression button
-if st.button("🚀 Start Compression", type="primary"):
+if st.button(" Start Compression", type="primary"):
     if uploaded_file is not None or text_input:
         # Progress animation
         progress_placeholder = st.empty()
@@ -429,7 +429,7 @@ if st.button("🚀 Start Compression", type="primary"):
         st.session_state.live_metrics['timestamps'].append(datetime.now())
         
         # Display results
-        st.markdown("### 📈 Compression Results")
+        st.markdown("###  Compression Results")
         
         col1, col2, col3, col4 = st.columns(4)
         
@@ -480,13 +480,13 @@ if st.button("🚀 Start Compression", type="primary"):
         # Progress cleanup
         progress_placeholder.empty()
         
-        st.success(f"✅ Compression completed using {algorithm}!")
+        st.success(f" Compression completed using {algorithm}!")
     else:
         st.error("Please upload a file or enter text to compress.")
 
 # Live charts
 if live_mode and len(st.session_state.live_metrics['timestamps']) > 0:
-    st.markdown("### 📊 Live Analytics Dashboard")
+    st.markdown("###  Live Analytics Dashboard")
     
     # Update live metrics display
     latest_metrics = st.session_state.live_metrics
@@ -519,13 +519,13 @@ if live_mode and len(st.session_state.live_metrics['timestamps']) > 0:
 
 # Comparison section
 if len(st.session_state.compression_history) > 1:
-    st.markdown("### 🔄 Algorithm Comparison")
+    st.markdown("###  Algorithm Comparison")
     
     comparison_chart = create_comparison_chart(st.session_state.compression_history)
     st.plotly_chart(comparison_chart, use_container_width=True)
     
     # Detailed comparison table
-    st.markdown("### 📋 Detailed Performance Table")
+    st.markdown("###  Detailed Performance Table")
     
     df = pd.DataFrame([
         {
@@ -546,7 +546,7 @@ if len(st.session_state.compression_history) > 1:
 st.markdown("---")
 st.markdown("""
 <div style="text-align: center; color: #666; margin-top: 2rem;">
-    <p>⚡ CompressFlow Studio - Advanced Compression Analytics Platform</p>
+    <p> CompressFlow Studio - Advanced Compression Analytics Platform</p>
     <p>Enterprise-Ready | Real-Time Performance | Professional Insights</p>
 </div>
 """, unsafe_allow_html=True)
